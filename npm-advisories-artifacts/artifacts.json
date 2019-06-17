@@ -1,0 +1,237 @@
+[
+  {
+    "_id": "ad29ed60-8fa6-11e9-a712-1ba1ff9d476e",
+    "_type": "visualization",
+    "_source": {
+      "title": "advisories_by_severity",
+      "visState": "{\"title\":\"advisories_by_severity\",\"type\":\"table\",\"params\":{\"perPage\":20,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":true,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Affected libraries\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"title.keyword\",\"size\":1000,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Advisory\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"severity.keyword\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Severity\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":1,\"direction\":\"asc\"}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "408a6be0-8fa5-11e9-a712-1ba1ff9d476e"
+      }
+    ]
+  },
+  {
+    "_id": "de3dd200-8fa5-11e9-a712-1ba1ff9d476e",
+    "_type": "visualization",
+    "_source": {
+      "title": "npm-advisories-top-ten-vulnerabilities",
+      "visState": "{\"title\":\"npm-advisories-top-ten-vulnerabilities\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"title.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Vulnerability\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "408a6be0-8fa5-11e9-a712-1ba1ff9d476e"
+      }
+    ]
+  },
+  {
+    "_id": "fee8d750-8fac-11e9-a712-1ba1ff9d476e",
+    "_type": "visualization",
+    "_source": {
+      "title": "npm-top-ten-modules-by advisor",
+      "visState": "{\"title\":\"npm-top-ten-modules-by advisor\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"module_name.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Module\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"title.keyword\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Advisor\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "408a6be0-8fa5-11e9-a712-1ba1ff9d476e"
+      }
+    ]
+  },
+  {
+    "_id": "f4dd7cd0-8fa6-11e9-a712-1ba1ff9d476e",
+    "_type": "visualization",
+    "_source": {
+      "title": "npm-advisories-modules-by-severity",
+      "visState": "{\"title\":\"npm-advisories-modules-by-severity\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"module_name.keyword\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Module\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"severity.keyword\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Severity\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"alias\":null,\"negate\":false,\"type\":\"phrase\",\"key\":\"severity\",\"value\":\"critical\",\"params\":{\"query\":\"critical\"},\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"severity\":{\"query\":\"critical\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "408a6be0-8fa5-11e9-a712-1ba1ff9d476e"
+      },
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+        "type": "index-pattern",
+        "id": "408a6be0-8fa5-11e9-a712-1ba1ff9d476e"
+      }
+    ]
+  },
+  {
+    "_id": "35185bd0-8fa7-11e9-a712-1ba1ff9d476e",
+    "_type": "visualization",
+    "_source": {
+      "title": "top-ten-critical-modules",
+      "visState": "{\"title\":\"top-ten-critical-modules\",\"type\":\"pie\",\"params\":{\"addLegend\":true,\"addTooltip\":true,\"isDonut\":true,\"labels\":{\"last_level\":true,\"show\":false,\"truncate\":100,\"values\":true},\"legendPosition\":\"right\",\"type\":\"pie\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"module_name.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Advisors\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"key\":\"severity\",\"negate\":false,\"params\":{\"query\":\"critical\"},\"type\":\"phrase\",\"value\":\"critical\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"severity\":{\"query\":\"critical\",\"type\":\"phrase\"}}}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "408a6be0-8fa5-11e9-a712-1ba1ff9d476e"
+      },
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+        "type": "index-pattern",
+        "id": "408a6be0-8fa5-11e9-a712-1ba1ff9d476e"
+      }
+    ]
+  },
+  {
+    "_id": "408a6be0-8fa5-11e9-a712-1ba1ff9d476e",
+    "_type": "index-pattern",
+    "_source": {
+      "title": "npm-advisories",
+      "fields": "[{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"access\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"access.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"created\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"cves\",\"type\":\"string\",\"count\":1,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"cves.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"cwe\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"cwe.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"formatted.created\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"formatted.created.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"found_by.link\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"found_by.link.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"found_by.name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"found_by.name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"id\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"module_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"module_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"overview\",\"type\":\"string\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"overview.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"patched_versions\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"patched_versions.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"recommendation\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"recommendation.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"references\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"references.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"reported_by.link\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"reported_by.link.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"reported_by.name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"reported_by.name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"severity\",\"type\":\"string\",\"count\":1,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"severity.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"title\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"title.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"updated\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"url\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"url.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"vulnerable_versions\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"vulnerable_versions.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "index-pattern": "6.5.0"
+    },
+    "_references": []
+  },
+  {
+    "_id": "d722bbf0-9097-11e9-a712-1ba1ff9d476e",
+    "_type": "visualization",
+    "_source": {
+      "title": "npm-advisories-main-title",
+      "visState": "{\"title\":\"npm-advisories-main-title\",\"type\":\"markdown\",\"params\":{\"fontSize\":15,\"openLinksInNewTab\":false,\"markdown\":\"# NPM Security Advisories to Elasticsearch\\n\\n#### This program fetches NPM Security advisories [ from here ](https://www.npmjs.com/advisories) and imports them into Elasticsearch, that way Kibana visualizations can be created to have a better understanding on those advisories, including npm modules affected and the vulnerabilities targeting those modules\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "f91ecbd0-8fad-11e9-a712-1ba1ff9d476e",
+    "_type": "dashboard",
+    "_source": {
+      "title": "NPM Security advisories",
+      "hits": 0,
+      "description": "A better way to visualize Node.JS security advisories in such a way we can understand demographics",
+      "panelsJSON": "[{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"x\":0,\"y\":8,\"w\":48,\"h\":21,\"i\":\"1\"},\"panelIndex\":\"1\",\"title\":\"Top ten NPM modules by advisor\",\"version\":\"7.1.1\",\"panelRefName\":\"panel_0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":29,\"w\":24,\"h\":15,\"i\":\"2\"},\"panelIndex\":\"2\",\"title\":\"Top ten advisories\",\"version\":\"7.1.1\",\"panelRefName\":\"panel_1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":44,\"w\":24,\"h\":15,\"i\":\"3\"},\"panelIndex\":\"3\",\"title\":\"Security advisories by severity\",\"version\":\"7.1.1\",\"panelRefName\":\"panel_2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":24,\"y\":29,\"w\":24,\"h\":15,\"i\":\"4\"},\"panelIndex\":\"4\",\"title\":\"Top ten critical advisories\",\"version\":\"7.1.1\",\"panelRefName\":\"panel_3\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":24,\"y\":44,\"w\":24,\"h\":15,\"i\":\"5\"},\"panelIndex\":\"5\",\"title\":\"Modules by severity\",\"version\":\"7.1.1\",\"panelRefName\":\"panel_4\"},{\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":8,\"i\":\"6\"},\"version\":\"7.1.1\",\"panelIndex\":\"6\",\"embeddableConfig\":{},\"title\":\"\",\"panelRefName\":\"panel_5\"}]",
+      "optionsJSON": "{\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "dashboard": "7.0.0"
+    },
+    "_references": [
+      {
+        "name": "panel_0",
+        "type": "visualization",
+        "id": "fee8d750-8fac-11e9-a712-1ba1ff9d476e"
+      },
+      {
+        "name": "panel_1",
+        "type": "visualization",
+        "id": "de3dd200-8fa5-11e9-a712-1ba1ff9d476e"
+      },
+      {
+        "name": "panel_2",
+        "type": "visualization",
+        "id": "ad29ed60-8fa6-11e9-a712-1ba1ff9d476e"
+      },
+      {
+        "name": "panel_3",
+        "type": "visualization",
+        "id": "35185bd0-8fa7-11e9-a712-1ba1ff9d476e"
+      },
+      {
+        "name": "panel_4",
+        "type": "visualization",
+        "id": "f4dd7cd0-8fa6-11e9-a712-1ba1ff9d476e"
+      },
+      {
+        "name": "panel_5",
+        "type": "visualization",
+        "id": "d722bbf0-9097-11e9-a712-1ba1ff9d476e"
+      }
+    ]
+  }
+]
