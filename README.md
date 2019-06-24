@@ -1,5 +1,5 @@
 # npm-advisories-to-elk
-A project to import NPM Security advisories into ELK
+A better way to visualize NPM advisories and understand what modules are vulnerable in the NPM registry. For more information, [Check out this blog post](https://blog.michaelhidalgo.info/2019/06/a-better-way-to-visualiza-npm-security.html)
 
 # Screenshots
 
