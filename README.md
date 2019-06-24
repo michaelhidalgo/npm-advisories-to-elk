@@ -16,4 +16,10 @@ A project to import NPM Security advisories into ELK
 + Create a virtual environment virtualenv env
 + Activated virtual environment source /env/bin/activate
 + Install dependenciees pip3 install -r requirements.txt
++ Export following environment variables with Elasticsearch IP address and port:
+  ```
+  export es_hostname='Your ELK IP'
+  export es_port='Your ELK port (9200 by default)'  
+  
+  ```
 + run python3 main.py
