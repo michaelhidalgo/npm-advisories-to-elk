@@ -11,6 +11,7 @@ A better way to visualize NPM advisories and understand what modules are vulnera
 
 
 # Installation:
+## It requires ELK 7
 
 + Fork or clone this repository
 + Create a virtual environment virtualenv env
