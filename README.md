@@ -23,3 +23,7 @@ A better way to visualize NPM advisories and understand what modules are vulnera
   
   ```
 + run python3 main.py
+
+
+
+![NPM advisories by severity](https://github.com/michaelhidalgo/npm-advisories-to-elk/blob/master/resources/install.jpg)
