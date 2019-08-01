@@ -15,7 +15,7 @@ A better way to visualize NPM advisories and understand what modules are vulnera
 
 + Fork or clone this repository
 + Create a virtual environment virtualenv env
-+ Activated virtual environment source /env/bin/activate
++ Activated virtual environment source env/bin/activate
 + Install dependenciees pip3 install -r requirements.txt
 + Export following environment variables with Elasticsearch IP address and port:
   ```
